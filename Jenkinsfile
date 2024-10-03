@@ -4,11 +4,15 @@ pipeline {
             label "maven-slave"
         }
     }
+environment {
+    PATH = "/opt/apache-maven-3.9.9/bin:$PATH"
+    
+}
 
     stages {
-        stage('clone-code') {
+        stage('build') {
             steps {
-                git branch: 'main', url: 'https://github.com/pythtesting/Devops_project.git'
+                sh 'mvn clen deploy'
             }
         }
     }
