@@ -37,7 +37,7 @@ pipeline {
            sh "${scannerHome}/bin/sonar-scanner" // this is going to communicate with oue sonarqube server and send the analysis file.
 
         }
-        }
+        } 
 
 
 
